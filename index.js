@@ -20,8 +20,8 @@ sub.addEventListener("click",data)
 ul.addEventListener('click',(e)=>{
 if(e.target.tagName=="I"){
     e.target.parentElement.parentElement.remove()
-    let index=arr.findIndex(()=>e.target.parentElement.parentElement.textContent)
-   console.log( arr.splice(index,1))
+    let index=arr.indexOf(e.target.parentElement.parentElement.textContent)
+   arr.splice(index,1)
 }
 if(ul.children.length==0){
     ul.style.display="none"
